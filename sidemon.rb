@@ -5,21 +5,21 @@
 class Sidemon < Formula
   desc "Minimal drop-in monitoring for side projects — uptime, errors, traffic, alerts."
   homepage "https://github.com/WHITELOTUS0/sidemon"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/WHITELOTUS0/sidemon/releases/download/v0.1.0/sidemon_darwin_amd64.tar.gz"
-      sha256 "4593c962b09126e59e67a6c35a4a55a9a6d32933c6bda38864ebae4d69e9137c"
+      url "https://github.com/WHITELOTUS0/sidemon/releases/download/v0.2.0/sidemon_darwin_amd64.tar.gz"
+      sha256 "8ef12af3c5f11b36ed11ad89978a82555ac31d6216bb57d4e0081b1b51a02ec0"
 
       define_method(:install) do
         bin.install "sidemon"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/WHITELOTUS0/sidemon/releases/download/v0.1.0/sidemon_darwin_arm64.tar.gz"
-      sha256 "e39da638547142b2e612d98248405241dc19b0e1267a5fb4b6e20e6fde213e69"
+      url "https://github.com/WHITELOTUS0/sidemon/releases/download/v0.2.0/sidemon_darwin_arm64.tar.gz"
+      sha256 "68980ff753e8c1526d68fe7829616bc0aa16f77e8a7f03fe107e9274e035e35a"
 
       define_method(:install) do
         bin.install "sidemon"
@@ -29,15 +29,15 @@ class Sidemon < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WHITELOTUS0/sidemon/releases/download/v0.1.0/sidemon_linux_amd64.tar.gz"
-      sha256 "ddc5ad8b0b3a074af56ce44918c177fb1f9816c844c5e432fd2f4f038b999cf4"
+      url "https://github.com/WHITELOTUS0/sidemon/releases/download/v0.2.0/sidemon_linux_amd64.tar.gz"
+      sha256 "cd3e3ebfb623004b71408581f57fdf798bbc66b07da45bda7a8a86af053cea4c"
       define_method(:install) do
         bin.install "sidemon"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WHITELOTUS0/sidemon/releases/download/v0.1.0/sidemon_linux_arm64.tar.gz"
-      sha256 "794ce633704ce206df82c047127a723d1f728d4b7a23419e8669c14193ae91c0"
+      url "https://github.com/WHITELOTUS0/sidemon/releases/download/v0.2.0/sidemon_linux_arm64.tar.gz"
+      sha256 "401424da64a5187c4b0a96ec4512d5e47cdd287d5b01edd8a756ee77edc5c5b5"
       define_method(:install) do
         bin.install "sidemon"
       end
